@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buy,best</title>
+    <style>
+        #navbar {
+            background-color: blue;
+        }
+
+        .nav_search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: -5px 20px;
+            height: 70px;
+        }
+
+        .nav_search>img {
+            width: 8%;
+            height: 70px;
+            margin-left: 50px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+
+        .nav_search>input {
+            width: 30%;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-right: 20rem;
+        }
+
+        .nav_search input+h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: white;
+            margin-right: 2rem;
+        }
+
+        .nav_search>p>img {
+            width: 50%;
+            height: 70px;
+        }
+
+        #cart {
+            color: white;
+            font-size: 30px;
+        }
+
+        .drop_down {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .drop_down>div {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            margin-left: 20px;
+        }
+
+        .drop_down>div p {
+            margin-right: 20px;
+            font-family: monospace;
+        }
+
+        .drop_down>div>div {
+            display: flex;
+        }
+
+        .drop_down>div>div>img {
+            width: 60px;
+            height: 50px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        #middle_sction {
+            border: 2px solid black;
+            background-image: linear-gradient(to bottom right, rgb(19, 35, 215), rgb(85, 95, 204));
+        }
+
+        #middle_sction>div:nth-child(1) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 60%;
+            margin: auto;
+            gap: 40px;
+            text-align: center;
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(1) {
+            font-size: 30px;
+
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(1)>h1:nth-child(1) {
+            color: white;
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(1)>h1:nth-child(2) {
+            font-size: 40px;
+            color: rgb(225, 208, 27);
+            margin-top: -30px;
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(2) {
+            text-align: left;
+            padding-top: 30px;
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(2)>h3 {
+            color: white;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: -10px;
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(2)>p {
+            color: white;
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(2) span {
+            color: yellow;
+        }
+
+        #middle_sction>div:nth-child(1)>div:nth-child(2)>button {
+            background-color: yellow;
+            padding: 7px 10px;
+            color: black;
+            border-radius: 8px;
+            border: 2px solid yellow;
+            font-weight: bold;
+            text-decoration: dotted;
+        }
+        footer{
+            background-color: rgb(188, 187, 186);
+            padding-top: 30px;
+        }
+        footer>div{
+            width:95%;
+            margin:auto
+        }
+        .ftr_prod_ststus{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            
+        }
+        .ftr_prod_ststus>div>img{
+            width: 60%;
+            margin: auto;
+        }
+        .ftr_prod_ststus>div{
+            text-align: center;
+            color: blue;
+        }
+        #ftr_middle{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #ftr_middle>div p a{
+            text-decoration: none;
+        }
+        #ftr_middle>div p{
+            margin-bottom: -5px;
+        }
+        #ftr_middle>div:nth-child(4){
+           
+            background-color: white;
+        }
+        #ftr_middle>div:nth-child(4)>div{
+           
+            width: 95%;
+            margin-left: auto;
+        }
+        #ftr_middle>div:nth-child(4)>div>p{
+            margin-bottom: 8px;
+        }
+        #ftr_middle>div:nth-child(4)>div>div{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+        }
+        #ftr_middle>div:nth-child(4)>div>div>a>img{
+            width: 100%;
+            text-align: center;
+        }
+         #ftr_middle+div{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+         #ftr_middle+div>div{
+            display: flex;
+         }
+         #ftr_middle+div>div p{
+            margin-right: 30px;
+         }
+         #middle_sction>p{
+            color: white;
+            width: 70%;
+            margin: auto;
+            margin-bottom: 30px;
+         }
+         /* type of product display grid */
+         #type_of_product{
+            width: 70%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 20px;
+         }
+         #type_of_product img{
+            width: 100%;
+            height: 10rem;
+            border-radius: 50%;
+         }
+         #type_of_product p{
+            text-align: center;
+         }
+         #you_viewes_saved{
+             width: 95%;
+             margin: auto;
+             margin-top: 40px;
+         }
+         #viewed{
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+         #saved{
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+         .para_viewed_saved{
+            color: blue;
+         }
+         .shows_item{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+         }
+         .shows_item>div{
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+         }
+         .shows_item img{
+            width: 70%;
+            margin: auto;
+            height: 10rem;
+         }
+         #outlet_deal{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+            width: 96%;
+            margin: auto;
+            margin-top: 50px;
+         }
+         #outlet_deal>div{
+            border: 2px solid black;
+         }
+         #outlet_deal>div>h2{
+            background-color: rgb(39, 39, 191);
+            width: 20%;
+            margin-left: 40px;
+            padding: 5px 10px;
+         }
+         #outlet_deal>div>h2>span:nth-child(1){
+            color: rgb(225, 225, 30);
+         }
+         #outlet_deal>div>h2>span:nth-child(2){
+            color: white;
+         }
+         #outlet_deal>div>div{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin-left: 50px;
+         }
+         #outlet_deal>div>div>div:nth-child(1) p{
+            font-size: 38px;
+            font-weight: bold;
+         }
+         #outlet_deal>div>div>div:nth-child(1) span{
+            color: rgb(193, 43, 43);
+         }
+         #outlet_deal>div>div>div:nth-child(2) {
+            margin-top: 40px;
+         }
+         #outlet_deal>div>div>div:nth-child(2) button{
+            color: blue;
+            background-color: aliceblue;
+            padding: 6px 10px;
+            border: 1px solid black;
+         }
+         #outlet_deal>div:nth-child(2)>p{
+            background-color: rgb(30, 30, 210);
+            width: 90%;
+            padding: 7px 14px;
+            margin-left: 20px;
+            color: white;
+            font-weight: bold;
+         }
+         #outlet_deal>div:nth-child(2) img{
+            width: 90%;
+            margin-top: 50px;
+         }
+         #outlet_deal>div:nth-child(2)>div>div{
+            margin-bottom: 20px;         
+         }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav_search">
+            <img src="./image/logo.png" alt="">
+            <p>menu</p>
+            <input type="text" placeholder="Search Buy, Best..">
+            <h3 class="Aiea">Aiea</h3>
+            <p>
+            <h3 id="cart">Cart</h3>
+            <img src="https://cdn.icon-icons.com/icons2/2715/PNG/512/shopping_cart_icon_172223.png" alt="Cart image" />
+            </p>
+        </div>
+        <hr>
+        <div class="drop_down">
+            <div>
+                <p>Holiday Deals</p>
+                <p>Top Deals</p>
+                <p>Deal of the Day</p>
+                <p>Totaltech Membership</p>
+                <p>Credit Cards</p>
+                <p>Gift Cards</p>
+                <p>Gift Ideas</p>
+                <p>More</p>
+            </div>
+            <div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlyH66vuqe4GCA38TsU4TifpfGJD6Bv5xMw&usqp=CAU"
+                        alt="acount logo">
+                    <p>Account</p>
+                </div>
+                <p>Recently Viewed</p>
+                <p>Order Status</p>
+                <p>Saved Items</p>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <!-- middle section -->
+    <div id="middle_sction">
+        <div>
+            <div>
+                <h1>Great Deals.</h1>
+                <h1>All in one place.</h1>
+            </div>
+            <div>
+                <h3>Find new deals all season long.</h3>
+                <p>Limited quantities. No rainchecks.See <span>Holiday FAQs</span> </p>
+                <button><a href="">Shop Now</a></button>
+            </div>
+        </div>
+        <!-- product type -->
+        <p>Shop deals by catagory</p>
+        <div id="type_of_product"></div>
+    </div>
+    <!-- you viewed and you saved -->
+    <div id="you_viewes_saved">
+        <span id="viewed">You viewed</span>
+        <span id="saved">You saved</span>
+        <hr>
+        <p class="para_viewed_saved">No viewd and no saved item</p>
+        <div class="shows_item"></div>
+    </div>
+    <!-- Outlet Deals //////////// -->
+   <div id="outlet_deal">
+    <div>
+        <h2><span>Outlet </span> <span>Deals</span></h2>
+        <div>
+            <div><p><span>Clearance</span> , open-box and more</p></div>
+            <div>
+                <p>save when you shop the Best Buy Outlet for clearance, open-box, refurbished and pre-owned items</p>
+                <button>View Outlet Deals</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p>20 Days of Deals</p>
+        <div>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlABIEPOyTnCC1sSFzIg_6E4o_3fpJ9e-Erw&usqp=CAU" alt=""></div>
+            <div>
+                <p>Microsoft - Surface Pro 7+ - 12.3” Touch Screen – Intel Core i5 – 8GB Memory – 256GB SSD with</p>
+                <h3>$649.99</h3>
+                <p>you get 52% discount of 1229.99</p>
+                <button>See Bonus Deals</button>
+            </div>
+        </div>
+    </div>
+   </div>
+    <!-- footer section -->
+    <footer>
+        <div>
+
+            <!-- footer product status -->
+            <div class="ftr_prod_ststus">
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTppatuOUo-zXwaoFdVw-zAhRL2QAQrbJNhRw&usqp=CAU"
+                        alt="">
+                    <p>Visit our Support Center</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmMIY0zKt3mAUIzn0HUu6P4YI2Jk3i1r8l542-jMF8JdpCJxHJPKZjvQNODt1PCwvTZEg&usqp=CAU"
+                        alt="">
+                    <p>Check your Order Status</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmMIY0zKt3mAUIzn0HUu6P4YI2Jk3i1r8l542-jMF8JdpCJxHJPKZjvQNODt1PCwvTZEg&usqp=CAU"
+                        alt="">
+                    <p>Shipping, Delivery & Store Pickup</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmMIY0zKt3mAUIzn0HUu6P4YI2Jk3i1r8l542-jMF8JdpCJxHJPKZjvQNODt1PCwvTZEg&usqp=CAU"
+                        alt="">
+                    <p>Return & Exchanges</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmMIY0zKt3mAUIzn0HUu6P4YI2Jk3i1r8l542-jMF8JdpCJxHJPKZjvQNODt1PCwvTZEg&usqp=CAU"
+                        alt="">
+                    <p>Price Match Guarantee</p>
+                </div>
+            </div>
+            <hr>
+            <!-- footer middle part -->
+            <div id="ftr_middle">
+                <div>
+                    <h3>Order & Purchases</h3>
+                    <p><a href="">Check Order Status</a></p>
+                    <p><a href="">Shipping, Delivery & Pickup</a></p>
+                    <p><a href="">Returns & Exchanges</a></p>
+                    <p><a href="">Price Match Guarantee</a></p>
+                    <p><a href="">Product Recalls</a></p>
+                    <p><a href="">Trade-In Program</a></p>
+                    <p><a href="">Gift Cards</a></p>
+                    <h3>Payment Options</h3>
+                    <p><a href="">My Best Buy® Credit Card</a></p>
+                    <p><a href="">Pay Your Bill at Citibank</a></p>
+                    <p><a href="">Lease to Own</a></p>
+                </div>
+                <div>
+                    <h3>Support & Services</h3>
+                    <p><a href="">Visit our Support Center</a></p>
+                    <p><a href="">Shop with an Expert</a></p>
+                    <p><a href="">Schedule a Service</a></p>
+                    <p><a href="">Manage an Appointment</a></p>
+                    <p><a href="">Protection & Support Plans</a></p>
+                    <p><a href="">Haul Away & Recycling</a></p>
+                    <p><a href="">Contact Us</a></p>
+                    <h3>Rewards & Membership</h3>
+                    <p><a href="">Best Buy Totaltech</a></p>
+                    <p><a href="">My Best Buy</a></p>
+                    <p><a href="">View Points & Certificates</a></p>
+                    <p><a href="">Member Offers</a></p>
+                </div>
+                <div>
+                    <h3>Partnerships</h3>
+                    <p><a href="">Affiliate Program</a></p>
+                    <p><a href="">Advertise with Us</a></p>
+                    <p><a href="">Developers</a></p>
+                    <p><a href="">Best Buy Health</a></p>
+                    <p><a href="">Best Buy Education</a></p>
+                    <p><a href="">Best Buy Business</a></p>
+                    <h3>About Best Buy</h3>
+                    <p><a href="">Corporate Information</a></p>
+                    <p><a href="">Careers</a></p>
+                    <p><a href="">Corporate Responsibility & Sustainability</a></p>
+                    <p><a href="">Discover & Learn</a></p>
+                </div>
+                <div>
+                    <div>
+                        <p><a href="">Sign in or Create Account</a></p>
+                        <hr>
+                        <h3>Get the latest deals snd more</h3>
+                        <form action="">
+                            <input type="search" placeholder="Enter email address">
+                            <input type="submit" value="Sign Up">
+                        </form>
+                        <hr>
+                        <h3>
+                            Buy Best app
+                            <a href="">Learn more ></a>
+                        </h3>
+                        <hr>
+                        <div>
+                            <a href="https://www.facebook.com/"> <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUnCnkkoRdDmCieU2oTjr0YhNvQW7FeFlrG3kGNHPKbYYPuggO_5QbZxzN9pq1wz28K8&usqp=CAU"
+                                    alt="fb"> </a>
+                            <a href="
+                    https://about.twitter.com"> <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAcZsnZA0ulrp9Zz2vYicdNTPCyMzmxIFOnA&usqp=CAU"
+                                    alt="tweeter"> </a>
+                            <a href="https://www.instagram.com/instracorporation/?hl=en"> <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPnx4cGncqJ1jf5VcZaNH_K_rIgIucyiLWg&usqp=CAU"
+                                    alt="instra"> </a>
+                            <a href="https://www.youtube.com/"> <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdCP98p3uBjQYiNwoIZiQVdoewvjr2PEcTyy5kviuferPfqdHN7qVSIYnoVW4Ce9aNy08&usqp=CAU"
+                                    alt="youtube"> </a>
+                        </div>
+                        <hr>
+                        <h3>Form, blogs & more</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div><span>How was your experience</span> <a href="">Give feedback about our website</a></div>
+                <div>
+                    <p>Mobile Site</p>
+                    <p>Best Buy Canada</p>
+                </div>
+            </div>
+            <hr>
+            <!-- footer bottom part -->
+            <div>
+                <a href="#">Accessibility</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy</a>
+                <a href="#">Interest-Based Ads</a>
+                <a href="#">California Privacy Rights</a>
+                <a href="#">Do Not Sell My Personal Information</a>
+                <a href="#">California Supply Chain Transparency Act</a>
+            </div>
+            <p>In-store pricing may vary. Prices and offers are subject to change. © 2022 Best Buy. All rights reserved.
+                BEST BUY, the BEST BUY logo, the tag design, and MY BEST BUY are trademarks of Best Buy and its
+                affiliated companies.</p>
+        </div>
+    </footer>
+    
+</body>
+<script src="./index.js"></script>
+</html>
