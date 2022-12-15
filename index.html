@@ -46,9 +46,10 @@
             height: 70px;
         }
 
-        #cart {
+        #cart a {
             color: white;
             font-size: 30px;
+            text-decoration: none;
         }
 
         .drop_down {
@@ -69,11 +70,13 @@
             font-family: monospace;
         }
 
-        .drop_down>div>div {
+        .drop_down>div>div>a {
             display: flex;
+            text-decoration: none;
+            color: white;
         }
 
-        .drop_down>div>div>img {
+        .drop_down>div>div img {
             width: 60px;
             height: 50px;
             margin-bottom: 10px;
@@ -139,185 +142,282 @@
             font-weight: bold;
             text-decoration: dotted;
         }
-        footer{
+
+        footer {
             background-color: rgb(188, 187, 186);
             padding-top: 30px;
         }
-        footer>div{
-            width:95%;
-            margin:auto
+
+        footer>div {
+            width: 95%;
+            margin: auto
         }
-        .ftr_prod_ststus{
+
+        .ftr_prod_ststus {
             display: grid;
-            grid-template-columns: repeat(5,1fr);
-            
+            grid-template-columns: repeat(5, 1fr);
+
         }
-        .ftr_prod_ststus>div>img{
+
+        .ftr_prod_ststus>div>img {
             width: 60%;
             margin: auto;
         }
-        .ftr_prod_ststus>div{
+
+        .ftr_prod_ststus>div {
             text-align: center;
             color: blue;
         }
-        #ftr_middle{
+
+        #ftr_middle {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
         }
-        #ftr_middle>div p a{
+
+        #ftr_middle>div p a {
             text-decoration: none;
         }
-        #ftr_middle>div p{
+
+        #ftr_middle>div p {
             margin-bottom: -5px;
         }
-        #ftr_middle>div:nth-child(4){
-           
+
+        #ftr_middle>div:nth-child(4) {
+
             background-color: white;
         }
-        #ftr_middle>div:nth-child(4)>div{
-           
+
+        #ftr_middle>div:nth-child(4)>div {
+
             width: 95%;
             margin-left: auto;
         }
-        #ftr_middle>div:nth-child(4)>div>p{
+
+        #ftr_middle>div:nth-child(4)>div>p {
             margin-bottom: 8px;
         }
-        #ftr_middle>div:nth-child(4)>div>div{
+
+        #ftr_middle>div:nth-child(4)>div>div {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
-        #ftr_middle>div:nth-child(4)>div>div>a>img{
+
+        #ftr_middle>div:nth-child(4)>div>div>a>img {
             width: 100%;
             text-align: center;
         }
-         #ftr_middle+div{
+
+        #ftr_middle+div {
             margin-top: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-         }
-         #ftr_middle+div>div{
+        }
+
+        #ftr_middle+div>div {
             display: flex;
-         }
-         #ftr_middle+div>div p{
+        }
+
+        #ftr_middle+div>div p {
             margin-right: 30px;
-         }
-         #middle_sction>p{
+        }
+
+        #middle_sction>p {
             color: white;
             width: 70%;
             margin: auto;
             margin-bottom: 30px;
-         }
-         /* type of product display grid */
-         #type_of_product{
+        }
+
+        /* type of product display grid */
+        #type_of_product {
             width: 70%;
             margin: auto;
             display: grid;
-            grid-template-columns: repeat(6,1fr);
+            grid-template-columns: repeat(6, 1fr);
             gap: 20px;
-         }
-         #type_of_product img{
+        }
+
+        #type_of_product img {
             width: 100%;
             height: 10rem;
             border-radius: 50%;
-         }
-         #type_of_product p{
+        }
+
+        #type_of_product p {
             text-align: center;
-         }
-         #you_viewes_saved{
-             width: 95%;
-             margin: auto;
-             margin-top: 40px;
-         }
-         #viewed{
+        }
+
+        #type_of_product a {
+            text-decoration: none;
+        }
+
+        #you_viewes_saved {
+            width: 95%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        #viewed {
             font-size: 20px;
             font-weight: bold;
             margin-right: 20px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-         }
-         #saved{
+        }
+
+        #saved {
             font-size: 20px;
             font-weight: bold;
             margin-left: 30px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-         }
-         .para_viewed_saved{
+        }
+
+        .para_viewed_saved {
             color: blue;
-         }
-         .shows_item{
+        }
+
+        .shows_item {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-         }
-         .shows_item>div{
+        }
+
+        .shows_item>div {
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-         }
-         .shows_item img{
+        }
+
+        .shows_item img {
             width: 70%;
             margin: auto;
             height: 10rem;
-         }
-         #outlet_deal{
+        }
+
+        #outlet_deal {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             width: 96%;
             margin: auto;
             margin-top: 50px;
-         }
-         #outlet_deal>div{
+        }
+
+        #outlet_deal>div {
             border: 2px solid black;
-         }
-         #outlet_deal>div>h2{
+        }
+
+        #outlet_deal>div>h2 {
             background-color: rgb(39, 39, 191);
             width: 20%;
             margin-left: 40px;
             padding: 5px 10px;
-         }
-         #outlet_deal>div>h2>span:nth-child(1){
+        }
+
+        #outlet_deal>div>h2>span:nth-child(1) {
             color: rgb(225, 225, 30);
-         }
-         #outlet_deal>div>h2>span:nth-child(2){
+        }
+
+        #outlet_deal>div>h2>span:nth-child(2) {
             color: white;
-         }
-         #outlet_deal>div>div{
+        }
+
+        #outlet_deal>div>div {
             display: flex;
             justify-content: space-between;
             width: 90%;
             margin-left: 50px;
-         }
-         #outlet_deal>div>div>div:nth-child(1) p{
+        }
+
+        #outlet_deal>div>div>div:nth-child(1) p {
             font-size: 38px;
             font-weight: bold;
-         }
-         #outlet_deal>div>div>div:nth-child(1) span{
+        }
+
+        #outlet_deal>div>div>div:nth-child(1) span {
             color: rgb(193, 43, 43);
-         }
-         #outlet_deal>div>div>div:nth-child(2) {
+        }
+
+        #outlet_deal>div>div>div:nth-child(2) {
             margin-top: 40px;
-         }
-         #outlet_deal>div>div>div:nth-child(2) button{
+        }
+
+        #outlet_deal>div>div>div:nth-child(2) button {
             color: blue;
             background-color: aliceblue;
             padding: 6px 10px;
             border: 1px solid black;
-         }
-         #outlet_deal>div:nth-child(2)>p{
+        }
+
+        #outlet_deal>div:nth-child(2)>p {
             background-color: rgb(30, 30, 210);
             width: 90%;
             padding: 7px 14px;
             margin-left: 20px;
             color: white;
             font-weight: bold;
-         }
-         #outlet_deal>div:nth-child(2) img{
+        }
+
+        #outlet_deal>div:nth-child(2) img {
             width: 90%;
             margin-top: 50px;
-         }
-         #outlet_deal>div:nth-child(2)>div>div{
-            margin-bottom: 20px;         
-         }
+        }
+
+        #outlet_deal>div:nth-child(2)>div>div {
+            margin-bottom: 20px;
+        }
+
+        /* deals inspire by you */
+        #box_for_prod {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            width: 90%;
+            margin: auto;
+            gap: 20px;
+        }
+
+        #box_for_prod img {
+            width: 100%;
+            height: 15rem;
+        }
+
+        #box_for_prod a {
+            text-decoration: none;
+        }
+
+        /* gift ideas for everyone , by price, Last minute gift */
+
+        #gift_price_lastminute{
+            display: grid;
+            grid-template-columns: repeat(3,1fr );   
+           gap: 30px;
+           margin-bottom: 30px;
+        }
+        #gift_price_lastminute>div>div{
+            padding: 20px 20px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+            background-color: rgb(221, 214, 214);
+        }
+        #gift_price_lastminute>div>div img{
+            width: 100%;
+        }
+        #gift_price_lastminute a{
+            text-decoration: none;
+        }
+        /* top Deals Clearance, open-box and more  */
+        #top_deals_box{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        #top_deals_box img{
+            width: 100%
+        }
+         #top_deals_box>div:nth-child(3){
+            border: 2px solid black;
+        }
     </style>
 </head>
 
@@ -329,7 +429,7 @@
             <input type="text" placeholder="Search Buy, Best..">
             <h3 class="Aiea">Aiea</h3>
             <p>
-            <h3 id="cart">Cart</h3>
+            <h3 id="cart"><a href="./cart.html"> Cart</a></h3>
             <img src="https://cdn.icon-icons.com/icons2/2715/PNG/512/shopping_cart_icon_172223.png" alt="Cart image" />
             </p>
         </div>
@@ -346,10 +446,11 @@
                 <p>More</p>
             </div>
             <div>
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlyH66vuqe4GCA38TsU4TifpfGJD6Bv5xMw&usqp=CAU"
-                        alt="acount logo">
-                    <p>Account</p>
+                <div> <a href="./signin.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlyH66vuqe4GCA38TsU4TifpfGJD6Bv5xMw&usqp=CAU"
+                            alt="acount logo">
+                        <p>Account</p>
+                    </a>
                 </div>
                 <p>Recently Viewed</p>
                 <p>Order Status</p>
@@ -384,30 +485,145 @@
         <div class="shows_item"></div>
     </div>
     <!-- Outlet Deals //////////// -->
-   <div id="outlet_deal">
-    <div>
-        <h2><span>Outlet </span> <span>Deals</span></h2>
+    <div id="outlet_deal">
         <div>
-            <div><p><span>Clearance</span> , open-box and more</p></div>
+            <h2><span>Outlet </span> <span>Deals</span></h2>
             <div>
-                <p>save when you shop the Best Buy Outlet for clearance, open-box, refurbished and pre-owned items</p>
-                <button>View Outlet Deals</button>
+                <div>
+                    <p><span>Clearance</span> , open-box and more</p>
+                </div>
+                <div>
+                    <p>save when you shop the Best Buy Outlet for clearance, open-box, refurbished and pre-owned items
+                    </p>
+                    <button>View Outlet Deals</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>20 Days of Deals</p>
+            <div>
+                <div><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlABIEPOyTnCC1sSFzIg_6E4o_3fpJ9e-Erw&usqp=CAU"
+                        alt=""></div>
+                <div>
+                    <p>Microsoft - Surface Pro 7+ - 12.3” Touch Screen – Intel Core i5 – 8GB Memory – 256GB SSD with</p>
+                    <h3>$649.99</h3>
+                    <p>you get 52% discount of 1229.99</p>
+                    <button>See Bonus Deals</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Deals inspire by you  -->
     <div>
-        <p>20 Days of Deals</p>
+        <h2>Deals inspired by your Shopping</h2>
+        <hr>
+        <div id="box_for_prod"></div>
+    </div>
+    <!-- gift ideas for everyone , by price, Last minute gift -->
+       <div id="gift_price_lastminute">
         <div>
-            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlABIEPOyTnCC1sSFzIg_6E4o_3fpJ9e-Erw&usqp=CAU" alt=""></div>
+            <h2>Gift Ideas for everyone</h2>
             <div>
-                <p>Microsoft - Surface Pro 7+ - 12.3” Touch Screen – Intel Core i5 – 8GB Memory – 256GB SSD with</p>
-                <h3>$649.99</h3>
-                <p>you get 52% discount of 1229.99</p>
-                <button>See Bonus Deals</button>
-            </div>
+            <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-78346-explore-top-tech-fb360ee0-4544-4e09-8910-b7346a598ca0.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Top Tech gifts</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-78346-explore-unique-dfdf9a0b-6136-4502-ae6c-5f0e0f2719a2.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Unique gifts</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-78346-explore-gifts-home-b891db5b-862c-4092-9de2-e261285126b9.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Gifts for the home</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-78346-explore-foodies-39a2636c-44c7-4d75-9d1c-addcb64b0442.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Gifts for foodies</p>
+            </a>
+        </div>
         </div>
     </div>
-   </div>
+        <div>
+            <h2>Gift Ideas by Price</h2>
+            <div>
+            <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-77117-gift-u25-flex_der-e1d370fa-759b-40e7-ab0e-94aa953375b4.png;maxHeight=384;maxWidth=384" alt="">
+                <p>Gifts under $25</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-77117-gift-2550-flex_der-894d90f1-a1a9-4e60-a5d8-3cbcc93c1ea3.png;maxHeight=384;maxWidth=384" alt="">
+                <p>Giftes $25-$50</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-77117-gift-150-flex_der-77fe4ed4-e00c-4307-ad96-da4bb590332a.png;maxHeight=384;maxWidth=384" alt="">
+                <p>Gifts $50-$100</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-77117-gift-100-200-flex_der-5cb443c4-1d58-4a9e-9dfe-1ec2ee29c18e.png;maxHeight=384;maxWidth=384" alt="">
+                <p>Gifts $100-$200</p>
+            </a>
+        </div>
+        </div>
+    </div>
+        <div>
+            <h2>Last-minute gifts</h2>
+            <div>
+            <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-79868-explore-lmg-ss-88174573-df36-46a7-945b-94ccaa12d465.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Stocking stuffers</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-79868-explore-lmg-toys-2b324833-860e-4398-b42b-22159c7fc18b.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Toys</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-79868-explore-lmg-vg-d5fb5f2f-6435-4faf-a7f4-622b0fd7527a.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Gaming accessories</p>
+            </a>
+        </div>
+        <div>
+            <a href="./product.html">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-79868-explore-lmg-gc-ea5dc1c3-fe9d-42c8-a503-b3c3bcd59071.jpg;maxHeight=432;maxWidth=432" alt="">
+                <p>Gift cards</p>
+            </a>
+        </div>
+        </div>
+    </div>
+       </div>
+
+       <!-- top Deals Clearance, open-box and more -->
+       <div id="top_deals_box">
+        <div></div>
+        <div>
+            <a href="./product.html"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL77376_TopDealsHoliday23_Entrypoints-GHP-Panel-LV-bb5db614-0c76-4cef-95ad-86e210c1cdeb.jpg;maxHeight=960;maxWidth=960" alt=""></a>
+        </div>
+        <div>
+            <a href="./product.html"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/ghp-MMT-588432-outlet-ea2b69c3-e9a7-4eee-a507-04c149472ab8.png;maxHeight=960;maxWidth=960" alt=""></a>
+        </div>
+       </div>
+
+
     <!-- footer section -->
     <footer>
         <div>
@@ -488,7 +704,7 @@
                 </div>
                 <div>
                     <div>
-                        <p><a href="">Sign in or Create Account</a></p>
+                        <p><a href="./signin.html">Sign in or Create Account</a></p>
                         <hr>
                         <h3>Get the latest deals snd more</h3>
                         <form action="">
@@ -545,7 +761,8 @@
                 affiliated companies.</p>
         </div>
     </footer>
-    
+
 </body>
 <script src="./index.js"></script>
+
 </html>

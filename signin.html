@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+         #navbar {
+            background-color: blue;
+        }
+
+        .nav_search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: -5px 20px;
+            height: 70px;
+        }
+
+        .nav_search >a {
+            width: 8%;
+            height: 70px;
+            margin-left: 50px;
+            margin-top: 6px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .nav_search >a>img{
+            width: 60%;
+            border-radius: 50%;
+        }
+
+        .nav_search>input {
+            width: 30%;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-right: 20rem;
+        }
+
+        .nav_search input+h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: white;
+            margin-right: 2rem;
+            text-decoration: none;
+        }
+
+        /* .nav_search>p>img {
+            width: 40%;
+            height: 70px;
+        } */
+        #cart {
+            color: white;
+            font-size: 30px;
+        }
+        #cart+img{
+            width: 5%;
+        }
+        #cart a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .drop_down {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .drop_down>div {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            margin-left: 20px;
+        }
+
+        .drop_down>div p {
+            margin-right: 20px;
+            font-family: monospace;
+        }
+
+        .drop_down>div>div {
+            display: flex;
+        }
+
+        .drop_down>div>div>img {
+            width: 60px;
+            height: 50px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        body{
+            background-color: rgb(157, 168, 168);
+        }
+        .container{
+            width: 300px;
+            margin: auto;
+            padding: 30px 10px;
+            margin-top: 30px;
+            text-align: center;           
+            background-color: white;
+        }
+        .container>form{
+           
+        }
+        .container>form>input{
+            display: block;
+            margin: auto;
+            padding: 8px 1rem;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+        #submit{
+            color: white;
+            background-color: rgb(31, 31, 162);
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav_search">
+           <a href="./index.html"> <img src="./image/logo.png" alt=""></a>
+            <p>menu</p>
+            <input type="text" placeholder="Search Buy, Best..">
+            <h3 class="Aiea">Aiea</h3>
+            <p>
+            <h3 id="cart"><a href="./cart.html"> Cart</a></h3>
+            <img src="https://cdn.icon-icons.com/icons2/2715/PNG/512/shopping_cart_icon_172223.png" alt="Cart image" />
+            </p>
+        </div>
+        <hr>
+        <div class="drop_down">
+            <div>
+                <p>Holiday Deals</p>
+                <p>Top Deals</p>
+                <p>Deal of the Day</p>
+                <p>Totaltech Membership</p>
+                <p>Credit Cards</p>
+                <p>Gift Cards</p>
+                <p>Gift Ideas</p>
+                <p>More</p>
+            </div>
+            <div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlyH66vuqe4GCA38TsU4TifpfGJD6Bv5xMw&usqp=CAU"
+                        alt="acount logo">
+                    <p>Account</p>
+                </div>
+                <p>Recently Viewed</p>
+                <p>Order Status</p>
+                <p>Saved Items</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form >
+            <input type="text" placeholder="email" required id="email">
+            <input type="password" placeholder="password" required id="passw1">
+            <input type="submit" value="signin" id="submit">
+        </form>
+        <h3>Create an account?<a href="./sign_up.html">Signup</a></h3>
+    </div>
+</body>
+<script>
+    let account_data=JSON.parse(localStorage.getItem("account_data")) ||[];
+    let form=document.querySelector("form");
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let flag=false;
+        account_data.forEach((element,index)=>{
+            if(form.email.value===element.email && form.passw1.value==element.pass){               
+                   flag=true;
+            }
+        });
+        if(flag){
+            alert("login successfully done")
+        }
+        else{
+            alert("wrong password");
+        }
+    });
+</script>
+</html>

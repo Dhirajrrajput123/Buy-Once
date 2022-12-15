@@ -162,12 +162,51 @@ let data= [
     "category": "Health, Fitness & Personal Care"
     }
     ];
+
+    //deals inspire by you
+    let prod_for_you=document.getElementById("box_for_prod");
+    your_prod(data);
+    function your_prod(data){
+        prod_for_you.innerHTML=null;
+        let count=0;
+        setInterval(()=>{
+            if(count<data.length){
+                
+            }
+            else{
+                count=0;
+                
+            }
+            
+            prod_for_you.innerHTML=null;
+               for(let i=count;i<count+6;i++){
+                let child_div=document.createElement("div");
+                let ancher_tag=document.createElement("a");
+                ancher_tag.setAttribute("href","./product.html");
+                let img=document.createElement("img");
+                img.setAttribute("src",data[i].img);
+                let details=document.createElement("p");
+                details.innerText=data[i].details;
+                let price=document.createElement("p");
+                price.innerText="$"+data[i].price;
+                ancher_tag.append(img,details,price);
+                child_div.append(ancher_tag);
+                prod_for_you.append(child_div);                
+               }
+               count+=6;
+
+        },5000);
+    }
+
+//type of product
 let container=document.getElementById("type_of_product");
 display_data(data);
 function display_data(data){
+    container.innerHTML=null;
     data.forEach((element)=>{
         let child_div=document.createElement("div");
         let ancher_tag=document.createElement("a");
+        ancher_tag.setAttribute("href","./product.html");
         let img=document.createElement("img");
         img.setAttribute("src",element.img);
         let category=document.createElement("p");
