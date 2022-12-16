@@ -162,6 +162,42 @@ let data= [
     "category": "Health, Fitness & Personal Care"
     }
     ];
+// you saved product
+let save_prod=JSON.parse(localStorage.getItem("save_product"))||[];
+let save=document.getElementById("saved");
+let pera_save=document.getElementById("para_viewed_saved");
+let cont_save_product=document.getElementById("shows_item");
+let viewed=document.getElementById("viewed");
+if(save_prod.length!=0){
+    pera_save.innerText="";
+    save_prod_shows(save_prod);
+}
+viewed.addEventListener("click",()=>{
+    cont_save_product.innerHTML=null;
+    pera_save.innerText="no viewed items";
+})
+
+save.addEventListener("click",()=>{
+    pera_save.innerText="";
+    save_prod_shows(save_prod);
+})
+
+function save_prod_shows(data){
+    cont_save_product.innerHTML=null;
+    data.forEach((element)=>{
+        let div_child=document.createElement("div");
+        let img=document.createElement("img");
+        img.setAttribute("src",element.avatar);
+        let name=document.createElement("h2");
+        name.innerText=element.tital;
+        let price=document.createElement("p")
+        price.innerText="$"+element.price;
+        div_child.append(img,name,price)
+        cont_save_product.append(div_child);
+    });
+}
+
+
 
     //deals inspire by you
     let prod_for_you=document.getElementById("box_for_prod");

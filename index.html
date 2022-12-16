@@ -251,6 +251,7 @@
 
         #type_of_product a {
             text-decoration: none;
+            color: yellow;
         }
 
         #you_viewes_saved {
@@ -418,6 +419,19 @@
          #top_deals_box>div:nth-child(3){
             border: 2px solid black;
         }
+        /* saved items */
+        #shows_item{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 20px;
+        }
+        #shows_item img{
+            width: 100%;
+            height: 150px;
+        }
+        #shows_item p{
+            color: rgb(0, 0, 225);
+        }
     </style>
 </head>
 
@@ -481,8 +495,8 @@
         <span id="viewed">You viewed</span>
         <span id="saved">You saved</span>
         <hr>
-        <p class="para_viewed_saved">No viewd and no saved item</p>
-        <div class="shows_item"></div>
+        <p id="para_viewed_saved">No viewd and no saved item</p>
+        <div id="shows_item"></div>
     </div>
     <!-- Outlet Deals //////////// -->
     <div id="outlet_deal">
