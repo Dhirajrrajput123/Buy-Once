@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+         #navbar {
+            background-color: blue;
+        }
+
+        .nav_search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: -5px 20px;
+            height: 70px;
+        }
+
+        .nav_search>img {
+            width: 8%;
+            height: 70px;
+            margin-left: 50px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+
+        .nav_search>input {
+            width: 30%;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-right: 20rem;
+        }
+
+        .nav_search input+h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: white;
+            margin-right: 2rem;
+        }
+
+        .nav_search>p>img {
+            width: 50%;
+            height: 70px;
+        }
+
+        #cart a {
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .drop_down {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .drop_down>div {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            margin-left: 20px;
+        }
+
+        .drop_down>div p {
+            margin-right: 20px;
+            font-family: monospace;
+        }
+
+        .drop_down>div>div>a {
+            display: flex;
+            text-decoration: none;
+            color: white;
+        }
+
+        .drop_down>div>div img {
+            width: 60px;
+            height: 50px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        #container{
+            width: 30%;
+            margin: auto;
+            /* border: 1px solid black; */
+            margin-top: 40px; 
+            text-align: center           ;
+        }
+        #container>form>input{
+           display: block;
+           margin: auto;
+           margin-bottom: 20px;
+           padding: 5px 20px;
+           border-radius: 5px; 
+           border-radius: 7px;          
+        }
+        #container>form>input:nth-child(5){
+            background-color: yellow;
+            color: black;
+            padding: 8px 30px;
+            font-weight: bold;
+        }
+        #total_payment{
+            text-align: center;
+        }
+        #confirm{
+            width: 30%;
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        #confirm input{
+            padding: 5px 30px;
+            margin-right: 30px;
+            border-radius: 5px;
+        }
+        #confirm input:nth-child(2){
+            background-color: yellow;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        #res_otp{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav_search">
+            <img src="./image/logo.png" alt="">
+            <p>menu</p>
+            <input type="text" placeholder="Search Buy, Best..">
+            <h3 class="Aiea">Aiea</h3>
+            <p>
+            <h3 id="cart"><a href="./cart.html"> Cart</a></h3>
+            <img src="https://cdn.icon-icons.com/icons2/2715/PNG/512/shopping_cart_icon_172223.png" alt="Cart image" />
+            </p>
+        </div>
+        <hr>
+        <div class="drop_down">
+            <div>
+                <p>Holiday Deals</p>
+                <p>Top Deals</p>
+                <p>Deal of the Day</p>
+                <p>Totaltech Membership</p>
+                <p>Credit Cards</p>
+                <p>Gift Cards</p>
+                <p>Gift Ideas</p>
+                <p>More</p>
+            </div>
+            <div>
+                <div> <a href="./signin.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlyH66vuqe4GCA38TsU4TifpfGJD6Bv5xMw&usqp=CAU"
+                            alt="acount logo">
+                        <p>Account</p>
+                    </a>
+                </div>
+                <p>Recently Viewed</p>
+                <p>Order Status</p>
+                <p>Saved Items</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- payment part -->
+    <h1 id="total_payment">Total Payment is:-</h1>
+
+    <div id="container">
+        <h1>PAYMENT Detailes</h1>
+        <form >
+            <input type="number" placeholder="Card Number" id="">
+            <input type="text" placeholder="MM/YY" id="">
+            <input type="numbet" placeholder="CVV">
+            <input type="text" placeholder="CARD Holder Name">
+            <input type="submit" value="Pay With Card" id="payment_submit">
+        </form>
+    </div>
+    <div id="confirm">
+        <h1>Please Enter your OTP</h1>
+        <form id="otp_sub">
+            <input type="number" placeholder="enter OTP" id="number_otp">
+            <input type="submit" value="Submit">
+
+        </form>
+        <p id="resend"></p>
+        <p id="res_otp">Click here for resend OTP</p>
+    </div>
+</body>
+<script>
+    let box=document.getElementById("total_payment");
+    let total_price=localStorage.getItem("total_price");
+    box.innerText="Total Payment is:- "+total_price;
+    let resend_otp=document.getElementById("resend");
+    let form=document.querySelector("form");
+    let reotp=document.getElementById("res_otp");
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        resend();
+        reotp.addEventListener("click",resend);
+    })
+    
+    // resend();
+    function resend(){
+        count=60;
+        setInterval(()=>{
+            if(count>=1){
+            count--;
+            resend_otp.innerText="resend OTP after  "+count;
+            }
+            else{
+                clearInterval();
+
+            }
+        },1000);
+    }
+
+    let form_confirm=document.getElementById("otp_sub");
+    form_confirm.addEventListener("submit",()=>{
+       
+       if(form_confirm.number_otp.value==1234||form_confirm.number_otp.value==1111||form_confirm.number_otp.value==2222||form_confirm.number_otp.value==3333||form_confirm.number_otp.value==4444){
+        alert("your Order Successfully done");
+       }
+       else{
+        alert("Wrong OTP");
+       }
+    });
+    
+</script>
+</html>
