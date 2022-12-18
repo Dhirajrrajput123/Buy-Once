@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <style>
-      #navbar {
+        #navbar {
             background-color: blue;
         }
 
@@ -18,7 +19,7 @@
             height: 70px;
         }
 
-        .nav_search >a {
+        .nav_search>a {
             width: 8%;
             height: 70px;
             margin-left: 50px;
@@ -26,7 +27,8 @@
             border-radius: 50%;
             margin-right: 20px;
         }
-        .nav_search >a>img{
+
+        .nav_search>a>img {
             width: 60%;
             border-radius: 50%;
         }
@@ -54,10 +56,12 @@
             color: white;
             font-size: 30px;
         }
-        #cart+img{
+
+        #cart+img {
             width: 5%;
         }
-        #cart a{
+
+        #cart a {
             color: white;
             text-decoration: none;
         }
@@ -94,6 +98,7 @@
             border-radius: 50%;
             margin-right: 6px;
         }
+
         /* footer section  */
         footer {
             background-color: rgb(188, 187, 186);
@@ -181,12 +186,103 @@
             margin: auto;
             margin-bottom: 30px;
         }
+
+        #top_midle_section {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(236, 236, 236);
+        }
+
+        #top_midle_section>button {
+            margin-left: 30px;
+            padding: 7px 30px;
+            border-radius: 7px;
+            border: 1px solid black;
+        }
+
+        #top_midle_section>button>a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        #top_midle_section select {
+            margin-left: 30px;
+            padding: 5px 30px;
+        }
+
+        #top_midle_section p {
+            font-size: 17px;
+        }
+
+        #top_midle_section h2 {
+            font-size: 30px;
+            margin-bottom: -10px;
+        }
+
+        #cart_product{
+            /* border: 2px solid red; */
+            display: grid;
+            grid-template-columns: 73% 25%;
+            gap: 2%;
+            margin-top: 30px;
+        }
+        #cart_product>div:nth-child(2){
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 10px 20px;
+        }
+        .total_price{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            padding-right: 30px;
+        }
+        .total_price>div:nth-child(2){
+            text-align: right;
+        }
+        #payment{
+            background-color: yellow;
+            padding: 10px 10px;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+        #payment a{
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+        #cart_item>div{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+        }
+       
+        #cart_item img{
+            width: 90%;
+        }
+        #cart_item>div>div:nth-child(2){
+            color: blue;
+        }
+         
+        #cart_item>div>div:nth-child(4) span:nth-child(2){
+           font-size: 20px;
+           margin-left: 10px;            
+        }
+        
+        
     </style>
 </head>
+
 <body>
-     <nav id="navbar">
+    <nav id="navbar">
         <div class="nav_search">
-           <a href="./index.html"> <img src="./image/logo.png" alt=""></a>
+            <a href="./index.html"> <img src="./image/logo.png" alt=""></a>
             <p>menu</p>
             <input type="text" placeholder="Search Buy, Best..">
             <h3 class="Aiea">Aiea</h3>
@@ -209,11 +305,11 @@
             </div>
             <div>
                 <div> <a href="./signin.html">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlyH66vuqe4GCA38TsU4TifpfGJD6Bv5xMw&usqp=CAU"
-                        alt="acount logo">
-                    <p>Account</p>
-                </a>
-            </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlyH66vuqe4GCA38TsU4TifpfGJD6Bv5xMw&usqp=CAU"
+                            alt="acount logo">
+                        <p>Account</p>
+                    </a>
+                </div>
                 <p>Recently Viewed</p>
                 <p>Order Status</p>
                 <p>Saved Items</p>
@@ -221,9 +317,57 @@
         </div>
     </nav>
     <hr>
+    <!-- middle section  -->
+    <div id="top_midle_section">
+        <div>
+            <h2>Gifting made easy</h2>
+            <p>Give Best Buy Gift Card</p>
+        </div>
+        <select id="select">
+            <option value="$10">$10</option>
+            <option value="$20">$20</option>
+            <option value="$30">$30</option>
+            <option value="$40">$40</option>
+        </select>
+        <button><a href="./cart.html">Add to Cart</a></button>
+    </div>
 
-     <!-- footer section  -->
-     <footer>
+    <!-- your cart items  -->
+    <div id="cart_product">
+        <div >
+            <h1>Your cart</h1>
+            <div id="cart_item"></div>
+        </div>
+        <!-- order summary  -->
+        <div>
+            <h2>Order Summary</h2>
+            <hr>
+            <div class="total_price">
+                <div>
+                    <p>Original Price</p>
+                    <p>Saving</p>
+                    <p>Shipping</p>
+                    <p>Store Pickup</p>
+                </div>
+                <div>
+                    <p id="original"></p>
+                    <p id="saving"></p>
+                    <p>FREE</p>
+                    <p>FREE</p>
+                </div>
+            </div>
+            <hr>
+            <div class="total_price">
+                <h1>Total</h1>
+                <h1 id="pay_price"></h1>
+            </div>
+            <div id="payment"><a href="./Payment.html">Checkout Payment</a></div>
+        </div>
+    </div>
+
+
+    <!-- footer section  -->
+    <footer>
         <div>
 
             <!-- footer product status -->
@@ -354,10 +498,12 @@
                 <a href="#">Do Not Sell My Personal Information</a>
                 <a href="#">California Supply Chain Transparency Act</a>
             </div>
-            <p>In-store pricing may vary. Prices and offers are subject to change. © 2022 Best Buy. All rights reserved.
+            <p>In-store pricing may vary. Prices and offers are subject to change. © 2022 Best Buy. All rights
+                reserved.
                 BEST BUY, the BEST BUY logo, the tag design, and MY BEST BUY are trademarks of Best Buy and its
                 affiliated companies.</p>
         </div>
     </footer>
 </body>
+<script src="./cart.js"></script>
 </html>
