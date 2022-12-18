@@ -170,8 +170,8 @@
 <script>
     let account_data=JSON.parse(localStorage.getItem("account_data")) ||[];
     let form=document.querySelector("form");
-    form.addEventListener("submit",(e)=>{
-        e.preventDefault();
+    form.addEventListener("submit",()=>{
+       
         if(form.passw1.value==form.passw2.value){
             let obj={
                 name:form.first_name.value+form.last_name.value,
@@ -180,6 +180,7 @@
                 num:form.number.value
             }
             account_data.push(obj);
+            alert("account create successfully")
             localStorage.setItem("account_data",JSON.stringify(account_data));
         }
         else{

@@ -170,7 +170,7 @@
     let account_data=JSON.parse(localStorage.getItem("account_data")) ||[];
     let form=document.querySelector("form");
     form.addEventListener("submit",(e)=>{
-        e.preventDefault();
+        // e.preventDefault();
         let flag=false;
         account_data.forEach((element,index)=>{
             if(form.email.value===element.email && form.passw1.value==element.pass){               
