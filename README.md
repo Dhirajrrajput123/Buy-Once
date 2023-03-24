@@ -1,30 +1,25 @@
 # hospitable-dinosaurs-8444
-Clone of amazon.com
-Amazon website was our project for Unit-3 Construct week at Masai School. We have made this project in 5 days.
-Our clone asos website - (https://lustrous-gumption-92216f.netlify.app/)
+Clone of Bestbuy.com
+BestBuy website was our project for Unit-2 Construct week at Masai School. We have made this project in 5 days.
+Our clone asos website - (https://reliable-bienenstitch-5608c5.netlify.app/)
 
 Tech Stack
--HTML -CSS -JAVA SCRIPT -GIT HUB
+-HTML -CSS -JAVASCRIPT -GIT HUB
+Toos
+VS code,Postman
 
 Features
--Login and signin page -Sorting for price -Add to cart opt for adding items -Increment and Decrement Number of product according to that price is also changes 
+-Login and signin page, most view product and like product show in home page. user can add the product into cart, increase and decrease the product in the cart. discount provided on the basis of product, user buy the product and make payment successfully. 
 
 Challenges we face during Construct week
 
-1.On the first day we did't know about each other what is our weakness and what is our strong areas. So it was very difficult to assign right thing to right person.
+this is my 1st project so i don't know how to start the the project so i search in google and youtube. after watching video i dicided to fisrt make chart and divided work on each day. 1st day i do all prepartion about my project and start build the project. in between cunstruct week i face small issues but i take help from google and resolve my proble.  
 
-2.Everyone's mind works differently and so ours. The website given to us. We changed some things in website. Everyone's idea was different. It is very difficult to choose one idea.
 
-As the navbar and footer were common for all the pages so we copied both of them in a single folder and imported them in every code, this was a kind of new method for us and we struggled while doing this step.
 
-4.Another challenge was to merge all of the files in a proper sequence which was again a difficult task for us because while merging and connecting all the pages some of the pages had the same name, and while running the site it was redirecting to some other pages so it was difficult to find the location and to rename the file.
 
-5.We faced challenges with CSS tags and class also, because when we merged CSS files for any page in which 2-3 members have worked, sometimes tags were colliding because of the same names of tags and classes.
+# ![Screenshot (323)](https://user-images.githubusercontent.com/115461643/227489246-dfcfcbea-5078-488c-a989-6c9fc170c128.png)
 
-# ![image](https://i.ibb.co/stN21q3/Screenshot-34.png" )
-
-Team
--Shankar S -Shakambhari -Suraj Yadav -Gopi Vishwakarma
 
 Authors
 @Dhiraj Kumar
