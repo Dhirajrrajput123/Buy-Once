@@ -13,7 +13,7 @@ Features
 
 Challenges we face during Construct week
 
-this is my 1st project so i don't know how to start the the project so i search in google and youtube. after watching video i dicided to fisrt make chart and divided work on each day. 1st day i do all prepartion about my project and start build the project. in between cunstruct week i face small issues but i take help from google and resolve my proble.  
+this is my 1st project so i don't know how to start the the project so i search in google and youtube. after watching video i dicided to fisrt make chart and divided work on each day. 1st day i do all prepartion about my project and start build the project. in between cunstruct week i face small issues but i take help from google and resolve my problem.  
 
 
 
